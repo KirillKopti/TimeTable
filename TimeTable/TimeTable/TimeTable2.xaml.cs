@@ -12,8 +12,8 @@ namespace TimeTable
     public partial class TimeTable2 : ContentPage
     {
         BoxView box;
-        Label lbl;
-        Frame frm, frm2;
+        Label pusto, day0, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, Esmaspäev, Teisipäev, Kolamapäev, Neljapäev, Rede;
+        Frame KeeljaKirjandus, VõrgutjaSeadmed, Mobrak, Transportlogjuht, Ingwin, EestiKeel, Wpigesead, KemiaBiologia;
         public TimeTable2() 
         {
             Grid grid = new Grid();
@@ -28,64 +28,76 @@ namespace TimeTable
             }
 
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 0, 0);
+            pusto = new Label { BackgroundColor = Color.MistyRose, Text = "\n", FontSize = 5 };
+            grid.Children.Add(pusto, 0, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 1, 0);
+            day0 = new Label { BackgroundColor = Color.MistyRose, Text = "0\n \n7:40-8:25", FontSize = 5 };
+            grid.Children.Add(day0, 1, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 2, 0);
+            day1 = new Label { BackgroundColor = Color.MistyRose, Text = "1\n \n8:30-9:15", FontSize = 5 };
+            grid.Children.Add(day1, 2, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 3, 0);
+            day2 = new Label { BackgroundColor = Color.MistyRose, Text = "2\n \n9:20-10:05", FontSize = 5 };
+            grid.Children.Add(day2, 3, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 4, 0);
+            day3 = new Label { BackgroundColor = Color.MistyRose, Text = "3\n \n10:10-10:55", FontSize = 5 };
+            grid.Children.Add(day3, 4, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 5, 0);
+            day4 = new Label { BackgroundColor = Color.MistyRose, Text = "4\n \n11:00-11:45", FontSize = 5 };
+            grid.Children.Add(day4, 5, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 6, 0);
+            day5 = new Label { BackgroundColor = Color.MistyRose, Text = "5\n \n11:50-12:35", FontSize = 5 };
+            grid.Children.Add(day5, 6, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 7, 0);
+            day6 = new Label { BackgroundColor = Color.MistyRose, Text = "6\n \n12:40-13:25", FontSize = 5 };
+            grid.Children.Add(day6, 7, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 8, 0);
+            day7 = new Label { BackgroundColor = Color.MistyRose, Text = "7\n \n13:30-14:15", FontSize = 5 };
+            grid.Children.Add(day7, 8, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 9, 0);
+            day8 = new Label { BackgroundColor = Color.MistyRose, Text = "8\n \n14:20-15:05", FontSize = 5 };
+            grid.Children.Add(day8, 9, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 0, 1);
+            day9 = new Label { BackgroundColor = Color.MistyRose, Text = "9\n \n15:10-15:55", FontSize = 5 };
+            grid.Children.Add(day9, 10, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 0, 2);
+            day10 = new Label { BackgroundColor = Color.MistyRose, Text = "10\n \n16:00-16:45", FontSize = 5 };
+            grid.Children.Add(day10, 11, 0);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 0, 3);
+            Esmaspäev = new Label { BackgroundColor = Color.MistyRose, Text = "Esmaspäev\n", FontSize = 5 };
+            grid.Children.Add(Esmaspäev, 0, 1);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 0, 4);
+            Teisipäev = new Label { BackgroundColor = Color.MistyRose, Text = "Teisipäev\n", FontSize = 5 };
+            grid.Children.Add(Teisipäev, 0, 2);
 
-            lbl = new Label { BackgroundColor = Color.MistyRose, Text = "Проверка\n", FontSize = 10 };
-            grid.Children.Add(lbl, 0, 5);
+            Kolamapäev = new Label { BackgroundColor = Color.MistyRose, Text = "Kolmapäev\n", FontSize = 5 };
+            grid.Children.Add(Kolamapäev, 0, 3);
+
+            Neljapäev = new Label { BackgroundColor = Color.MistyRose, Text = "Neljapäev\n", FontSize = 5 };
+            grid.Children.Add(Neljapäev, 0, 4);
+
+            Rede = new Label { BackgroundColor = Color.MistyRose, Text = "Rede\n", FontSize = 5 };
+            grid.Children.Add(Rede, 0, 5);
 
 
-            frm = new Frame { BorderColor = Color.Black, BackgroundColor = Color.White };
-            grid.Children.Add(frm, 1, 2);
-            Grid.SetColumnSpan(frm, 3);//объединим 3 ячейки, где находиться рамка frm
-            frm2 = new Frame
+            KeeljaKirjandus = new Frame { BorderColor = Color.White, BackgroundColor = Color.White };
+            grid.Children.Add(KeeljaKirjandus, 2, 1);
+            Grid.SetColumnSpan(KeeljaKirjandus, 2);
+            KeeljaKirjandus = new Frame
+
+            VõrgutjaSeadmed = new Frame { BorderColor = Color.White, BackgroundColor = Color.White };
+            grid.Children.Add(VõrgutjaSeadmed, 3, 1);
+            Grid.SetColumnSpan(VõrgutjaSeadmed, 1);
+            VõrgutjaSeadmed = new Frame
+
             {
                 BackgroundColor = Color.BlueViolet,
-                BorderColor = Color.Red,
+                BorderColor = Color.White,
                 CornerRadius = 10,
                 Opacity = 0 
             };
-            grid.Children.Add(frm2, 2, 3);
-            Grid.SetRowSpan(frm2, 2);
+            grid.Children.Add(VõrgutjaSeadmed, 2, 3);
+            Grid.SetRowSpan(KeeljaKirjandus, 2);
             Content = grid;
         }
     }
