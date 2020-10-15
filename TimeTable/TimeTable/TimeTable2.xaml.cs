@@ -13,7 +13,7 @@ namespace TimeTable
     {
         BoxView box;
         Label pusto, day0, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, Esmaspäev, Teisipäev, Kolamapäev, Neljapäev, Rede;
-        Frame KeeljaKirjandus, VõrgutjaSeadmed, Mobrak, Transportlogjuht, Ingwin, EestiKeel, Wpigesead, KemiaBiologia;
+        Frame KeeljaKirjandus, VõrgutjaSeadmed, Mobrak, Transportlogjuht, Ingwin, EestiKeel, Wpigesead, KemiaBiologia, Vaheaeg;
         public TimeTable2() 
         {
             Grid grid = new Grid();
@@ -83,12 +83,32 @@ namespace TimeTable
             KeeljaKirjandus = new Frame { BorderColor = Color.White, BackgroundColor = Color.White };
             grid.Children.Add(KeeljaKirjandus, 2, 1);
             Grid.SetColumnSpan(KeeljaKirjandus, 2);
-            KeeljaKirjandus = new Frame
+            KeeljaKirjandus = new Frame;
+
+            VõrgutjaSeadme = new Frame { BorderColor = Color.White, BackgroundColor = Color.White };
+            grid.Children.Add(VõrgutjaSeadmed, 3, 1);
+            Grid.SetColumnSpan(VõrgutjaSeadmed, 2);
+            VõrgutjaSeadmed = new Frame;
+
+            Vaheaeg = new Frame { BorderColor = Color.White, BackgroundColor = Color.White };
+            grid.Children.Add(Vaheaeg, 4, 1);
+            Grid.SetColumnSpan(Vaheaeg, 1);
+            Vaheaeg = new Frame;
+
+            Mobrak = new Frame { BorderColor = Color.White, BackgroundColor = Color.White };
+            grid.Children.Add(Mobrak, 5, 1);
+            Grid.SetColumnSpan(Mobrak, 3);
+            Mobrak = new Frame;
+
+             = new Frame { BorderColor = Color.White, BackgroundColor = Color.White };
+            grid.Children.Add(VõrgutjaSeadmed, 3, 1);
+            Grid.SetColumnSpan(VõrgutjaSeadmed, 1);
+            VõrgutjaSeadmed = new Frame;
 
             VõrgutjaSeadmed = new Frame { BorderColor = Color.White, BackgroundColor = Color.White };
             grid.Children.Add(VõrgutjaSeadmed, 3, 1);
             Grid.SetColumnSpan(VõrgutjaSeadmed, 1);
-            VõrgutjaSeadmed = new Frame
+            VõrgutjaSeadmed = new Frame;
 
             {
                 BackgroundColor = Color.BlueViolet,
