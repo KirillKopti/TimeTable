@@ -11,11 +11,11 @@ namespace TimeTable
 {
     public partial class TimeTable2 : ContentPage
     {
-        Label Esmaspäev, Teisipäev, Kolmapäev, Neljapäev, Rede, Venekeel, VõrgutjaSeadmet, MobRak, TranspLogJuht, Ing, Eestikeel, WpaigSead, TranspLogJuht1, KeemiaBioloogia, WpaigSead1, VõrgutjaSeadmet1, Ing1, KeemiaBioloogia1, MobRak1;
+        Label Esmaspäev, Teisipäev, Kolmapäev, Neljapäev, Rede, Venekeel, VõrgutSeadmet, MobRak, TranspLogJuht, Ing, Eestikeel, WpaigSead, TranspLogJuht1, KeemiaBioloogia, WpaigSead1, VõrgutjaSeadmet1, Ing1, KeemiaBioloogia1, MobRak1;
         public TimeTable2() 
         {
             Grid grid = new Grid();
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i < 10; i++)
             {
                 grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             }
@@ -50,11 +50,11 @@ namespace TimeTable
             grid.Children.Add(Venekeel, 2, 1);
             Grid.SetColumnSpan(Venekeel, 2);
             var tap = new TapGestureRecognizer();
-            tap.Tapped += (s, e) =>
+            tap.Tapped += (s, e) => 
 
-            VõrgutjaSeadmet = new Label { HorizontalOptions = LayoutOptions.Center, BackgroundColor = Color.LightPink, Text = "Võrgut ja seadmete", FontSize = 15 };
-            grid.Children.Add(VõrgutjaSeadmet, 4, 1);
-            Grid.SetColumnSpan(VõrgutjaSeadmet, 2);
+            VõrgutSeadmet = new Label { HorizontalOptions = LayoutOptions.Center, BackgroundColor = Color.LightPink, Text = "Võrgut ja seadmete", FontSize = 15 };
+            grid.Children.Add(VõrgutSeadmet, 4, 1);
+            Grid.SetColumnSpan(VõrgutSeadmet, 2);
             var tap1 = new TapGestureRecognizer();
             tap1.Tapped += (s, e) =>
 
@@ -131,7 +131,7 @@ namespace TimeTable
             tap13.Tapped += (s, e) =>
 
             Venekeel.GestureRecognizers.Add(tap);
-            VõrgutjaSeadmet.GestureRecognizers.Add(tap1);
+            VõrgutSeadmet.GestureRecognizers.Add(tap1);
             MobRak.GestureRecognizers.Add(tap2);
             TranspLogJuht.GestureRecognizers.Add(tap3);
             Ing.GestureRecognizers.Add(tap4);
