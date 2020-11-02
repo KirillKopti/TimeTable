@@ -53,7 +53,7 @@ namespace TimeTable
             Neljapaev = new Label { BackgroundColor = Color.White, Text = "\n \n Neljapäev" };
             abs.Children.Add(Neljapaev, 0, 4);
             Reede = new Label { BackgroundColor = Color.White, Text = "\n \n Reede" };
-            abs.Children.Add(Rede, 0, 5);
+            abs.Children.Add(Reede, 0, 5);
             urok1 = new Label { BackgroundColor = Color.LightGreen, Text = "Keel ja \n Kirjandus" };
             abs.Children.Add(urok1, 1, 1);
             Grid.SetColumnSpan(urok1, 2);
